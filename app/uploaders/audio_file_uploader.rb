@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+# FIXME minor: uploading same file twice results in 2nd upload failing.
+
 class AudioFileUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
