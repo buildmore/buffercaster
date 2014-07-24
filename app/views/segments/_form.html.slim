@@ -1,4 +1,4 @@
-= form_for @segment do |f|
+= form_for @segment, :html => { :multipart => true } do |f|
   - if @segment.errors.any?
     #error_explanation
       h2 = "#{pluralize(@segment.errors.count, "error")} prohibited this segment from being saved:"
