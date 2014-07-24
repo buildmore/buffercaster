@@ -38,7 +38,16 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Use slim
 
+# Use slim
 gem 'slim-rails'
+
+# Sorcery
+gem "sorcery"
+
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
 
