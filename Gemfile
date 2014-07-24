@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
+gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -46,8 +46,29 @@ gem 'slim-rails'
 gem "sorcery"
 
 
+group :assets do
+  gem 'bootstrap-sass'
+  gem 'font-awesome-sass-rails'
+end
+
+group :development do
+  gem 'letter_opener', :group=>:development
+end
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
+
+
+# gems configured using drone.bz. http://drone.bz/6b64fe7c-f3cb-47d3-a0eb-1c850daaf351.rb
+gem 'cancan'
+gem 'therubyracer'
+gem 'compass-rails'
+gem 'chronic'
+gem 'underscore-rails'
+gem 'carrierwave'
+gem 'simple_form'
+gem 'country_select'
+
 
 
