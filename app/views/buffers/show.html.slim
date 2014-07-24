@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @buffer.name
+p
+  strong Episode file:
+  = @buffer.episode_file
+p
+  strong Description:
+  = @buffer.description
+
+= link_to 'Edit', edit_buffer_path(@buffer)
+'|
+= link_to 'Back', buffers_path

@@ -1,0 +1,25 @@
+h1 Listing buffers
+
+table
+  thead
+    tr
+      th Name
+      th Episode file
+      th Description
+      th
+      th
+      th
+
+  tbody
+    - @buffers.each do |buffer|
+      tr
+        td = buffer.name
+        td = buffer.episode_file
+        td = buffer.description
+        td = link_to 'Show', buffer
+        td = link_to 'Edit', edit_buffer_path(buffer)
+        td = link_to 'Destroy', buffer, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Buffer', new_buffer_path

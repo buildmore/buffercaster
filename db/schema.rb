@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724191026) do
+ActiveRecord::Schema.define(version: 20140724200334) do
+
+  create_table "buffers", force: true do |t|
+    t.string   "name"
+    t.string   "episode_file"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "segments", force: true do |t|
     t.string   "name"
@@ -19,6 +27,9 @@ ActiveRecord::Schema.define(version: 20140724191026) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "buffer_id"
   end
+
+  add_index "segments", ["buffer_id"], name: "index_segments_on_buffer_id"
 
 end
